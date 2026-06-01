@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import {
+  Image,
   Pressable,
   SafeAreaView,
   ScrollView,
@@ -79,7 +80,10 @@ export default function HomeScreen() {
       <View style={styles.center}>
         <View style={styles.card}>
           <View style={styles.logoBox}>
-            <Text style={styles.logoText}>LOGO</Text>
+            <Image
+              source={require('@/assets/images/fdhdfjgng.png')}
+              style={styles.logoImage}
+            />
           </View>
 
           <Text style={styles.title}>Palpite da Copa 2026</Text>
@@ -195,12 +199,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#F5B8CD',
     marginBottom: 20,
+    overflow: 'hidden',
   },
-  logoText: {
-    color: '#C55C83',
-    fontSize: 14,
-    fontWeight: '800',
-    letterSpacing: 0,
+  logoImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
   },
   title: {
     color: '#7A2746',
